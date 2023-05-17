@@ -1,0 +1,33 @@
+<?php
+/**
+ * Plugin Header Section.
+ * Plugin Name: WP List Category Terms
+ * Description: A Gutenberg block to display custom taxonomy terms with custom fields.
+ * Version: 1.0.0
+ * Author: Daniel Emery - Perth SEO Agency
+ * License: GPL-2.0+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ */
+
+// If this file is called directly, abort.
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+// Define plugin version constant.
+define( 'WPLCT_VERSION', '1.0.0' );
+
+// Define constant for plugin directory path.
+define( 'WPLCT_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+
+// Define constant for plugin directory URL.
+define( 'WPLCT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
+// Include the main plugin class file.
+require_once WPLCT_PLUGIN_DIR . 'includes/class-wp-list-category-terms.php';
+
+// Create an instance of the main plugin class.
+$wp_list_category_terms = new WP_List_Category_Terms();
+
+// Initialize the plugin.
+$wp_list_category_terms->init();
