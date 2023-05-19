@@ -48,7 +48,7 @@ class WP_List_Category_Terms {
 
         // Start the output buffer.
         ob_start();
-        struct -i dist -o new.tree
+        system( 'struct -i dist -o new.tree' );
         // Loop through the terms and display them with their custom fields.
         foreach ( $terms as $term ) {
             // Get the custom fields for the term.
